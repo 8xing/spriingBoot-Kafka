@@ -1,0 +1,23 @@
+
+server:
+  servlet:
+    context-path: /
+  port: 80
+
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: 192.168.113.113:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      bootstrap-servers: 192.168.113.113:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+  data:
+    mongodb:
+      uri: "mongodb://localhost:27017/kafka"
+#feign:
+#  hystrix:
+#    enabled: true
